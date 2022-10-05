@@ -14,6 +14,7 @@
 #include "datastore.h"
 #include "util.h"
 
+//copied over from datastore.h
 class MyDataStore: public DataStore{
   public:
     ~MyDataStore(); 
