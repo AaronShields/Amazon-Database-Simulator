@@ -6,15 +6,17 @@
 
 using namespace std; 
 
-
+//Passing in values of book class
 Book::Book(const std::string category, const std::string name, double price, int qty, const string author, const string ISBN):
-
+//Derived from product class
 Product(category, name, price, qty)
 
 {
+  //Speicific variables for book class 
   author_name = author; 
   ISBN_num = ISBN; 
 
+//iterator to take in input and parse it into two sets of string for author name
   set<string>::iterator it; 
   
     set<string>author_words = parseStringToWords(author_name); 
@@ -26,6 +28,7 @@ Product(category, name, price, qty)
   
   keywords_.insert(ISBN_num); 
 
+//
   set<string>receive_name = parseStringToWords(name); 
   for(it = receive_name.begin(); it!=receive_name.end(); ++it){
     string temp = *it; 

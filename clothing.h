@@ -8,7 +8,7 @@
 #include "product.h"
 
 using namespace std; 
-
+//clothing makes call to parent product 
 class Clothing : public Product{
   public:
   Clothing(const std::string category, const std::string name, double price, int qty, const std::string size, const std::string brand); 
@@ -16,6 +16,7 @@ class Clothing : public Product{
   string displayString() const; 
   void dump(std::ostream& os) const; 
 
+//protected size and brand 
   protected:
   string size_; 
   string brand_; 

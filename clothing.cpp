@@ -9,7 +9,7 @@ using namespace std;
 Clothing::Clothing(const std::string category, const std::string name, double price, int qty, const string size, const string brand):
 
 Product(category, name, price, qty)
-
+//
 {
   size_ = size; 
   brand_ = brand; 
@@ -18,6 +18,7 @@ Product(category, name, price, qty)
   set<string> type_brand = parseStringToWords(brand); 
   for(it = type_brand.begin(); it!= type_brand.end(); ++it)
   {
+    //iterator to make string lowercase and suggest keywords
     string temp = *it; 
     string lowercase_temp = convToLower(temp); 
     keywords_.insert(lowercase_temp); 
@@ -35,7 +36,7 @@ set<string> Clothing::keywords() const
 {
   return keywords_; 
 }
-
+// displays string of clothing
 string Clothing::displayString() const
 {
   std::stringstream display; 

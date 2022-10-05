@@ -13,24 +13,31 @@
 template <typename T>
 std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2)
 {
+  //calls set result
    std::set<T> result; 
    for(typename std::set<T>::iterator it = s1.begin(); it != s1.end(); ++it){
        if(s2.find(*it) != s2.end()){
            result.insert(*it); 
+           //iterators find intersection and return result
        }
    }
     return result; 
+    //returns set that is fast
 }
 template <typename T>
 std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2)
 {
+  //iterator to find the set union 
+  //call a set result to find the set of 2
     std::set<T> result = s2;
     for(typename std::set<T>::iterator it = s1.begin(); it != s1.end(); ++it){
         if(result.find(*it) == result.end()){
             result.insert(*it); 
+            //inserts result
         }
     }
     return result;
+    //returns the set that is found
 }
 
 /***********************************************/
